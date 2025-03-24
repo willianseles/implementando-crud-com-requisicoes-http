@@ -41,7 +41,11 @@ Instale o JSON Server globalmente (se ainda não estiver instalado):
 
 ```bash
 npm install -g json-server
-```
+
+```pasta backend
+cd backend
+npm init -y
+
 
 Para executar, abra um novo terminal e, dentro da pasta backend, execute:
 
