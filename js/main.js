@@ -2,7 +2,7 @@ import ui from "./ui.js"
 import api from "./api.js"
 
 document.addEventListener("DOMContentLoaded", () => {
-ui.renderizarPensamentos()
+  ui.renderizarPensamentos()
 
   const formularioPensamento = document.getElementById("pensamento-form")
   const botaoCancelar = document.getElementById("botao-cancelar")
@@ -11,24 +11,25 @@ ui.renderizarPensamentos()
   botaoCancelar.addEventListener("click", manipularCancelamento)
 })
 
-function manipularCancelamento() {
-  ui.limparFormulario();
-}
-
 async function manipularSubmissaoFormulario(event) {
-  event.preventDefault();
+  event.preventDefault()
   const id = document.getElementById("pensamento-id").value
   const conteudo = document.getElementById("pensamento-conteudo").value
   const autoria = document.getElementById("pensamento-autoria").value
 
-  try {
+  try { 
     if(id) {
-      await api.editarPensamento({id, conteudo, autoria})
+      await api.editarPensamento({ id, conteudo, autoria })
     } else {
-      await api.salvarPensamento({conteudo, autoria})
+      await api.salvarPensamento({ conteudo, autoria })
     }
     ui.renderizarPensamentos()
-  } catch {
-    alert("Erro ao salvar pensamentos")
   }
+  catch {
+    alert("Erro ao salvar pensamento")
+  }
+}
+
+function manipularCancelamento() {
+  ui.limparFormulario()
 }
