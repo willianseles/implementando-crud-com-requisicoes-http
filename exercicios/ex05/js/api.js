@@ -2,7 +2,7 @@ const URL_BASE = "http://localhost:3000/pets";
 const api = {
   async buscarInformacoesPets() {
     try {
-      const response = await axios.pet(`${URL_BASE}`);
+      const response = await axios.get(`${URL_BASE}`);
       return await response.data;
     } catch (error) {
       alert('Erro ao buscar dados');
