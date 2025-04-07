@@ -90,3 +90,31 @@ GET: Usado para buscar informações ou recursos do servidor, equivalente à ope
 PUT: Atualiza informações de um recurso específico no servidor, correspondendo à operação de update;
 
 DELETE: Remove um recurso específico do servidor, equivalente à operação de delete.
+
+Ao trabalhar com requisições HTTP em JavaScript, você tem à disposição duas principais opções: Axios e Fetch.
+
+Ambas são usadas para enviar solicitações para servidores e manipular respostas, mas existem diferenças que podem influenciar na escolha entre uma ou outra.
+
+1. Axios
+Axios é uma biblioteca externa que oferece uma interface mais amigável para fazer requisições HTTP. Ela simplifica o tratamento de promises. Consequentemente, facilita na hora de modificar, de forma global, requisições e respostas.
+
+A biblioteca lida automaticamente com erros comuns de rede e HTTP, como timeouts e códigos de erro. Ou seja, dispensa que você se preocupe com falhas comuns. Dada sua simplificação e funcionalidades adicionais, Axios é bem adotada na comunidade e facilita o desenvolvimento de aplicações web complexas.
+
+2. Fetch
+Por outro lado, o Fetch é uma API nativa atual do navegador, integrada diretamente ao ambiente JavaScript do navegador.
+
+Ela suporta promises e oferece controle sobre streams de dados, o que é útil para operações avançadas de manipulação de dados.
+
+No entanto, Fetch pode ser menos intuitiva devido à sua sintaxe mais direta e à necessidade de manipular manualmente algumas situações de erro e configurações globais.
+
+Podemos, então, dizer que implementar requisições HTTP fica mais “trabalhoso” com fetch. No entanto, de forma alguma é uma opção inválida.
+
+Axios ou Fetch? Eis a questão!
+Lá vem o famoso “depende”. Quais as necessidades do seu projeto? Na empresa onde você atua (ou pretende trabalhar), qual abordagem é utilizada? Considere esses critérios ao escolher uma das duas opções.
+
+Os pontos fortes do Axios são sua simplicidade e funcionalidades extras, e não à toa costuma ser a favorita da comunidade. Porém, como toda biblioteca, precisa ser observada - e bem gerenciada. É indispensável acompanhar as atualizações e mudanças para que o código do projeto continue a rodar perfeitamente.
+
+Por outro lado, o Fetch oferece uma solução nativa no navegador, sem a necessidade de dependências externas, e pode ser mais adequada para projetos que precisam de um controle mais direto sobre streams de dados.
+
+Ambas as opções são válidas e eficazes para realizar requisições HTTP em aplicações web. A decisão final deve considerar o contexto do projeto, as necessidades de desenvolvimento e a familiaridade da equipe com cada uma das tecnologias.
+
